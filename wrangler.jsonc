@@ -85,7 +85,7 @@
     // ── 安全鉴权（推荐以 Secret 类型配置，见 .dev.vars.example）──────────
     //
     // JWT 签名密钥（>=16 字符，兼作可选的字段加密密钥与定时任务鉴权）
-    // "JWT_SECRET": "N0NHDfQajrlgoIVZq0JyYgYsF3Mqa-a0hncjgusXjCI",
+    "JWT_SECRET": "N0NHDfQajrlgoIVZq0JyYgYsF3Mqa-a0hncjgusXjCI",
     //
     // 跳过安装向导，自动以该密码初始化 admin
     // "ADMIN_PASS": "Azzz12345678",
@@ -161,9 +161,9 @@
   //   控制台：Workers & Pages → D1 → 创建数据库 → 绑定到 Worker，变量名填 DB
   //   省略 database_id 时，wrangler >= 4.45.0 会自动创建同名库并回写
   //
-  // "d1_databases": [
-  //   { "binding": "DB", "database_name": "openlist", "database_id": "" }
-  // ],
+  "d1_databases": [
+    { "binding": "DB", "database_id": "17f1aa02-5623-4dc4-92c5-10c55f992dca" }
+],
   //
   // ▶ 方案 C：Durable Objects（内置 SQLite，强一致；DB_FORMAT 建议改为 "sql"）
   //   注意：DO 需要 migrations，且删除成本高，适合单租户部署。
